@@ -1,16 +1,24 @@
-import { useState } from 'react'
-import './App.css'
+import RecipeCard from './components/RecipeCard';
+import './App.css';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-      <h1>the meal planner will be here</h1>
-      </div>
-    </>
-  )
+    <div className="app">
+      <h1>My Recipes</h1>
+      
+      <RecipeCard 
+        name="Chicken Soup"
+        servings={6}
+      />
+      
+      <RecipeCard 
+        name="Pasta Carbonara"
+        servings={4}
+        imageUrl="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=300"
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
